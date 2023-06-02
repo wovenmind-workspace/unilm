@@ -1,0 +1,25 @@
+{
+  "$schema": "https://codesandbox.io/schemas/tasks.json",
+  "setupTasks": [
+    {
+        "name": "activate conda environment",
+        "command": "conda init zsh && source ~/.zshrc"
+    },
+    {
+        "name": "instasll nltk",
+        "command": "source ~/.zshrc && pip instal nltk && python -c \"import nltk; nltk.download('punkt')\""
+    },
+    {
+        "name": "install transformers",
+        "command": "source ~/.zshrc && pip install transformers==2.10.0"
+    },
+    {
+        "name": "install setup.py",
+        "command": "source ~/.zshrc && pip install -e ."
+    },
+    {
+        "name": "install pytorch",
+        "command": "source ~/.zshrc && conda install pytorch==1.7.1 cpuonly -c pytorch"
+    }
+  ]
+}
