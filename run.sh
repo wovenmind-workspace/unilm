@@ -1,0 +1,17 @@
+python decode_seq2seq.py \
+    --model_type layoutlm \
+    --tokenizer_name bert-base-uncased \
+    --input_folder ./test \
+    --output_file ./output.txt \
+    --split test \
+    --do_lower_case \
+    --model_path . \
+    --cache_dir ./cache \
+    --max_seq_length 1024 \
+    --max_tgt_length 511 \
+    --batch_size 32 \
+    --beam_size 1 \
+    --length_penalty 0 \
+    --forbid_duplicate_ngrams \
+    --mode s2s \
+    --forbid_ignore_word "."
